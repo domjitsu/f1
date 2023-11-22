@@ -4,6 +4,8 @@ On selection, the app displays a bar chart visualizing lap times and a table sor
 
 The app uses Tremor for the bar chart and table as well as other components in the application. CSS styles are handled using Tailwind.
 
+![screenshot](./public/dark.png)
+
 --
 
 The app also includes support for Light and Dark mode, managed by Tailwind and localstorage.
