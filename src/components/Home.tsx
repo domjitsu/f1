@@ -102,9 +102,9 @@ export function Home() {
     return lapData?.MRData.RaceTable.Races[0].Laps[0].Timings;
   }, [lapData]);
 
-  if (!data) return <p>Loading race data...</p>;
   if (error || raceDataError || lapDataError || !races)
     return <p>Error loading data. Please try again.</p>;
+  if (!data) return <p>Loading race data...</p>;
 
   selectedRace?.forEach((lap) => {
     const result = lapTimings?.find(
