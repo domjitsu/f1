@@ -1,6 +1,6 @@
-This application interfaces with the [Ergast Formula 1 API](https://ergast.com/mrd/) to retrieve the 2023 F1 schedule. Users can select individual race laps, including each driver's fastest lap, for detailed analysis.
+This application interfaces with the [Ergast Formula 1 API](https://ergast.com/mrd/) to retrieve the 2023 F1 schedule. Users can select individual race laps, or each driver's fastest lap for that race, for detailed lap times.
 
-On selection, the app displays a bar chart visualizing lap times and a table sorted by the fastest laps. Additionally, users can save specific laps to 'Favorites' for quicker access in future sessions. These favorites are persistently stored in a Zustand store, leveraging localStorage for data retention across page refreshes.
+The app displays a bar chart visualizing lap times and a table sorted by the fastest laps. Additionally, users can save specific laps to Favorites for quicker access. These favorites are persistently stored in a Zustand store, leveraging localStorage for persistence across page refreshes.
 
 The app uses Tremor for the bar chart and table as well as other components in the application. CSS styles are handled using Tailwind.
 
