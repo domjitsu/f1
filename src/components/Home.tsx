@@ -13,7 +13,7 @@ import { convertLapTimeToSeconds } from "@/utils/convertLapTimeToSeconds";
 import { fetcher } from "@/utils/fetcher";
 import Image from "next/image";
 
-const BASE_URL = "http://ergast.com/api/f1";
+const BASE_URL = "https://ergast.com/api/f1";
 const CURRENT_RACES = "/current.json";
 
 export function Home() {
