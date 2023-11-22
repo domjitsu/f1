@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install all pacakges:
+
+```bash
+npm i
+# or
+yarn i
+# or
+pnpm i
+```
+
+Then,run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +20,26 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This application interfaces with the [Ergast Formula 1 API](https://ergast.com/mrd/) to retrieve the 2023 F1 schedule. Users can select individual race laps, including each driver's fastest lap, for detailed analysis.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+On selection, the app displays a bar chart visualizing lap times and a table sorted by the fastest laps. Additionally, users can save specific laps to 'Favorites' for quicker access in future sessions. These favorites are persistently stored in a Zustand store, leveraging localStorage for data retention across page refreshes.
 
-## Learn More
+The app uses Tremor for the bar chart and table as well as other components in the application. CSS styles are handled using Tailwind.
 
-To learn more about Next.js, take a look at the following resources:
+The app also includes support for Light and Dark mode, managed by Tailwind and localstorage.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+--
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Included are 2 tests `Favorites.test.tsx` and `convertLapTimeToSeconds.test.ts`. To run these tests, simply run:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run test
+# or
+yarn test
+# or
+pnpm test
+```
