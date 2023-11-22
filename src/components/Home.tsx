@@ -126,7 +126,7 @@ export function Home() {
         theme === "dark" ? "dark" : ""
       }`}
     >
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 pb-8">
         <div className="pb-6 pt-3 text-right">
           <Button onClick={toggleTheme} variant="secondary">
             {theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
